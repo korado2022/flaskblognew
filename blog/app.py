@@ -10,7 +10,13 @@ from blog.models import User
 
 def create_app() -> Flask:
     app = Flask(__name__)
-    app.config.from_object('blog.config')
+    app.config['FLASK_DEBUG'] = 1
+    app.config['FLASK_ENV'] = 'development'
+    app.config['DATABASE_URL'] = 'sqlite:///blognew.db'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blognew.db'
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    app.config['SECRET_KEY'] = '-u%644akr4bplr*b6397=yj6^4-76#_#=2qpmwlpkh#-0zb1i_'
+    app.config['API_URL'] = 'http: // 127.0.0.1:5000'
 
     register_extensions(app)
     register_blueprints(app)
