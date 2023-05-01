@@ -16,7 +16,7 @@ def create_app() -> Flask:
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blognew.db'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.config['SECRET_KEY'] = '-u%644akr4bplr*b6397=yj6^4-76#_#=2qpmwlpkh#-0zb1i_'
-    app.config['API_URL'] = 'http://0.0.0.0:10000'
+    app.config['API_URL'] = 'https://flask-blog-new-deploy.onrender.com'
 
     register_extensions(app)
     register_blueprints(app)
