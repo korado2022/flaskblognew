@@ -18,12 +18,11 @@ article = Blueprint('article', __name__, url_prefix='/articles', static_folder='
 def article_list():
     articles: Article = Article.query.all()
     # call RPC method
-    count_articles: Dict = requests.get(f'{API_URL}/api/articles/event_get_count/').json()
+    # count_articles: Dict = requests.get(f'{API_URL}/api/articles/event_get_count/').json()
     return render_template(
         'articles/list.html',
         articles=articles,
-        count_articles=count_articles['count'],
-
+        # count_articles=count_articles['count'],
     )
 
 
