@@ -22,7 +22,7 @@ Mako==1.2.4
 MarkupSafe==2.1.2
 marshmallow==3.2.1
 marshmallow-jsonapi==0.24.0
-python-dotenv==1.0.0
+python-dotenv==0.19.1
 PyYAML==6.0
 requests==2.29.0
 simplejson==3.19.1
